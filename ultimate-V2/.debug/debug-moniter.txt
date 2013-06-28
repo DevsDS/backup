@@ -1,0 +1,2258 @@
+This is a test for the Contex-A8...
+Initial the /dev/ttySAC1 ...
+Initial GPS...
+Initial the /dev/ttySAC2 ...
+iniparser: cannot open ./DrowsyDriving.cfg
+iniparser_load error...
+Can NOT find "./DrowsyDriving.cfg" file, use the defalut parameter.
+The Device parameter :
+ >       apn = CMNET 
+ >        ip = 211.137.45.80 
+ >      port = 11004 
+ >    dev_id = 15140539442 
+ >       ver = 12800030100 [11]
+ >       ven = 1067 [4]
+ >  group_id = cldw0000069 [11]
+============================
+ATE0
+
+OK
+
+Receive bytes :6
+============================
+ATE0...success
+============================
+AT%RST
+AT-Command Interpreter ready
+
+Receive bytes :30
+============================
+EM310 Reset...Success
+============================
+ATE0
+ATE0
+OK
+
+Receive bytes :11
+============================
+ATE0...success
+============================
+AT+CGMI
+
+HUAWEI
+
+OK
+
+Receive bytes :16
+============================
+AT+CGMI...success
+============================
+AT+CGMM
+
+EM310
+
+OK
+
+Receive bytes :15
+============================
+AT+CGMM...success
+EM310 confirm...
+============================
+AT%TSIM
+
+
+%TSIM 1
+
+OK
+
+Receive bytes :19
+============================
+AT%TSIM...success
+SIM card is insert...
+============================
+AT+CREG=1
+
+OK
+
+Receive bytes :6
+============================
+Network Registration...success
+============================
+AT+COPS?
+
++COPS: 0,0,"CHINA  MOBILE"
+
+OK
+
+Receive bytes :36
+============================
+Operator Selection : CHINA MOBILE
+============================
+AT+CGATT?
+
++CGATT: 1
+
+OK
+
+Receive bytes :19
+============================
+GPRS Service is Attach
+============================
+AT+CGREG?
+
++CGREG: 0,5
+
+OK
+
+Receive bytes :21
+============================
+GPRS is not Register
+Try to Register GPRS Service...
+============================
+AT+CGREG=1
+
+OK
+
+Receive bytes :6
+============================
+Register GPRS Service...success
+**** setup tcpip ****
+============================
+AT+CREG=1
+
+OK
+
+Receive bytes :6
+============================
+Network Registration...success
+============================
+AT+COPS?
+
++COPS: 0,0,"CHINA  MOBILE"
+
+OK
+
+Receive bytes :36
+============================
+Operator Selection : CHINA MOBILE
+network OK...
+============================
+AT+CGATT?
+
++CGATT: 1
+
+OK
+
+Receive bytes :19
+============================
+GPRS Service is Attach
+============================
+AT+CGREG?
+
++CGREG: 1,5
+
+OK
+
+Receive bytes :21
+============================
+GPRS is Register
+GPRS connection OK...
+============================
+AT%IOMODE=1,1,0
+
+OK
+
+Receive bytes :6
+============================
+I/O mode config...success
+============================
+AT+CGDCONT=1,"IP","CMNET"
+
+OK
+
+Receive bytes :6
+============================
+Setup APN...success
+============================
+AT%ETCPIP="user","gprs"
+
+OK
+
+Receive bytes :6
+============================
+Enable TCP/IP stack...success
+============================
+AT%ETCPIP?
+
+%ETCPIP:1,"10.27.8.109",,"211.137.32.178","211.136.17.107"
+
+OK
+
+Receive bytes :68
+============================
+TCP/IP initial...success
+============================
+AT%IPOPEN="UDP","211.137.45.80",11004,,4098
+
+CONNECT
+
+
+Receive bytes :13
+============================
+Open UDP Link...success
+============================
+AT%IPDDMODE=0
+
+OK
+
+Receive bytes :6
+============================
+Config Packet auto del mode...success
+============================
+AT+CSQ
+
++CSQ: 24,99 
+
+OK
+
+Receive bytes :22
+============================
+AT+CSQ...success
+CSQ = 24
+Try_Login : Try to login....
+[Send Packet]
+(*)TLP Head : 0x99 0x25 0x00 0x18 0x80 0x03 0x00 0x00 0x00 0x00 0x00 0x04 0xFF 0xFF 0xF1 0x51 0x40 0x53 0x94 0x42 0x18 0x6C 0x35 0x64 
+[*]APP data : 0x41 0x00 0x01 0x00 0x02 0x74 0x50 0x00 0x01 0x04 
+
+============================
+AT%IPSEND
+
+OK
+
+Receive bytes :6
+============================
+GSM_SendPacket : Send Packet...success
+GSM_SendPacket : Send Packet...over
+TLP_SendPacket : ACK ...OK
+Send_LoginPacket : Login Packet send ...OK
+============================
+AT%IPDQ
+
+%IPDQ: 1,1
+
+OK
+
+Receive bytes :20
+============================
+buff add = -1093310412
+============================
+AT%IPDR=0
+
+%IPDR:1,1,28,"2B3D00180003000000000004FFFFF15140539442186C335541000101"
+
+OK
+
+Receive bytes :81
+============================
+pstart add = -1093310404
+GSM_ReceivePacket : > length = 28
+Receive Packet ...
+link num    = 1
+data index  = 1
+data length = 28
+[Receive Packet]
+(*)TLP Head : 0x2B 0x3D 0x00 0x18 0x00 0x03 0x00 0x00 0x00 0x00 0x00 0x04 0xFF 0xFF 0xF1 0x51 0x40 0x53 0x94 0x42 0x18 0x6C 0x33 0x55 
+(*)APP data : 0x41 0x00 0x01 0x01 
+TLP_ReceivePacket : CRC OK!
+Try_Login : Login...ACK OK.
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 1,1
+
+OK
+
+Receive bytes :20
+============================
+buff add = -1093310380
+============================
+AT%IPDR=0
+
+%IPDR:1,1,71,"329E00180001000000001900FFFFF15140539442186BBEE10D00000A3436363233346238356401010005003C00013600060C0C1911352200013700020258000131000400000006"
+
+OK
+
+Receive bytes :167
+============================
+pstart add = -1093310372
+GSM_ReceivePacket : > length = 71
+Receive Packet ...
+link num    = 1
+data index  = 1
+data length = 71
+[Receive Packet]
+(*)TLP Head : 0x32 0x9E 0x00 0x18 0x00 0x01 0x00 0x00 0x00 0x00 0x19 0x00 0xFF 0xFF 0xF1 0x51 0x40 0x53 0x94 0x42 0x18 0x6B 0xBE 0xE1 
+(*)APP data : 0x0D 0x00 0x00 0x0A 0x34 0x36 0x36 0x32 0x33 0x34 0x62 0x38 0x35 0x64 0x01 0x01 
+              0x00 0x05 0x00 0x3C 0x00 0x01 0x36 0x00 0x06 0x0C 0x0C 0x19 0x11 0x35 0x22 0x00 
+              0x01 0x37 0x00 0x02 0x02 0x58 0x00 0x01 0x31 0x00 0x04 0x00 0x00 0x00 0x06 
+TLP_ReceivePacket : CRC OK!
+InputPacket_Process : This is a Type A transmit packet...
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 1,1
+
+OK
+
+Receive bytes :20
+============================
+buff add = -1093310380
+============================
+AT%IPDR=0
+
+%IPDR:1,1,73,"4F2100180001000000001910FFFFF15140539442186BBF0E0D00000A6533343338326131646501010006001E00013600060C0C190100000001370002025800013600060C0C1A030F00"
+
+OK
+
+Receive bytes :171
+============================
+pstart add = -1093310372
+GSM_ReceivePacket : > length = 73
+Receive Packet ...
+link num    = 1
+data index  = 1
+data length = 73
+[Receive Packet]
+(*)TLP Head : 0x4F 0x21 0x00 0x18 0x00 0x01 0x00 0x00 0x00 0x00 0x19 0x10 0xFF 0xFF 0xF1 0x51 0x40 0x53 0x94 0x42 0x18 0x6B 0xBF 0x0E 
+(*)APP data : 0x0D 0x00 0x00 0x0A 0x65 0x33 0x34 0x33 0x38 0x32 0x61 0x31 0x64 0x65 0x01 0x01 
+              0x00 0x06 0x00 0x1E 0x00 0x01 0x36 0x00 0x06 0x0C 0x0C 0x19 0x01 0x00 0x00 0x00 
+              0x01 0x37 0x00 0x02 0x02 0x58 0x00 0x01 0x36 0x00 0x06 0x0C 0x0C 0x1A 0x03 0x0F 
+              0x00 
+TLP_ReceivePacket : CRC OK!
+InputPacket_Process : This is a Type A transmit packet...
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 1,1
+
+OK
+
+Receive bytes :20
+============================
+buff add = -1093310380
+============================
+AT%IPDR=0
+
+%IPDR:1,1,73,"633600180001000000001920FFFFF15140539442186BBF560D00000A3864363762613761323801010006001E00013600060C0C1911371F00013900040000012C000131000400000006"
+
+OK
+
+Receive bytes :171
+============================
+pstart add = -1093310372
+GSM_ReceivePacket : > length = 73
+Receive Packet ...
+link num    = 1
+data index  = 1
+data length = 73
+[Receive Packet]
+(*)TLP Head : 0x63 0x36 0x00 0x18 0x00 0x01 0x00 0x00 0x00 0x00 0x19 0x20 0xFF 0xFF 0xF1 0x51 0x40 0x53 0x94 0x42 0x18 0x6B 0xBF 0x56 
+(*)APP data : 0x0D 0x00 0x00 0x0A 0x38 0x64 0x36 0x37 0x62 0x61 0x37 0x61 0x32 0x38 0x01 0x01 
+              0x00 0x06 0x00 0x1E 0x00 0x01 0x36 0x00 0x06 0x0C 0x0C 0x19 0x11 0x37 0x1F 0x00 
+              0x01 0x39 0x00 0x04 0x00 0x00 0x01 0x2C 0x00 0x01 0x31 0x00 0x04 0x00 0x00 0x00 
+              0x06 
+TLP_ReceivePacket : CRC OK!
+InputPacket_Process : This is a Type A transmit packet...
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 1,1
+
+OK
+
+Receive bytes :20
+============================
+buff add = -1093310380
+============================
+AT%IPDR=0
+
+%IPDR:1,1,75,"095100180001000000001930FFFFF15140539442186BBF980D00000A3230353334306139366400000005003C00013600060C0C1903000000013900040000019000013600060C0C1A030F00"
+
+OK
+
+Receive bytes :175
+============================
+pstart add = -1093310372
+GSM_ReceivePacket : > length = 75
+Receive Packet ...
+link num    = 1
+data index  = 1
+data length = 75
+[Receive Packet]
+(*)TLP Head : 0x09 0x51 0x00 0x18 0x00 0x01 0x00 0x00 0x00 0x00 0x19 0x30 0xFF 0xFF 0xF1 0x51 0x40 0x53 0x94 0x42 0x18 0x6B 0xBF 0x98 
+(*)APP data : 0x0D 0x00 0x00 0x0A 0x32 0x30 0x35 0x33 0x34 0x30 0x61 0x39 0x36 0x64 0x00 0x00 
+              0x00 0x05 0x00 0x3C 0x00 0x01 0x36 0x00 0x06 0x0C 0x0C 0x19 0x03 0x00 0x00 0x00 
+              0x01 0x39 0x00 0x04 0x00 0x00 0x01 0x90 0x00 0x01 0x36 0x00 0x06 0x0C 0x0C 0x1A 
+              0x03 0x0F 0x00 
+TLP_ReceivePacket : CRC OK!
+InputPacket_Process : This is a Type A transmit packet...
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
+============================
+AT%IPDQ
+
+%IPDQ: 0,0
+
+OK
+
+Receive bytes :20
+============================
+InputPacket_Process : Receive packet faild!
