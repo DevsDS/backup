@@ -96,8 +96,8 @@ static void __exit richtek_debug_exit(void)
 	debugfs_remove(richtek_debug);
 }
 
-module_init();
-module_exit();
+module_init(richtek_debug_init);
+module_exit(richtek_debug_exit);
 
 
 MODULE_AUTHOR("0xdeebf");
